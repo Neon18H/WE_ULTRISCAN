@@ -3,264 +3,278 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UltriScan | Vulnerability Exposure Intelligence</title>
+    <title>UltriScan | Elite Cyber Exposure Intelligence</title>
     <meta
       name="description"
-      content="UltriScan centraliza activos, findings y CVEs para priorizar riesgo real con una experiencia SaaS enterprise lista para escalar."
+      content="UltriScan es la plataforma enterprise de cyber exposure intelligence para descubrir activos, escanear continuamente, correlacionar CVEs con NVD/NIST y priorizar riesgo real."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-orb orb-a" aria-hidden="true"></div>
-    <div class="bg-orb orb-b" aria-hidden="true"></div>
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="aurora aurora-a" aria-hidden="true"></div>
+    <div class="aurora aurora-b" aria-hidden="true"></div>
 
     <header class="topbar">
       <div class="container nav-wrap">
-        <a class="brand" href="#">
+        <a class="brand" href="#top">
           <span class="brand-mark" aria-hidden="true"></span>
           <span>UltriScan</span>
         </a>
         <nav class="nav-links" aria-label="Navegación principal">
-          <a href="#valor">Producto</a>
-          <a href="#nvd">NVD / NIST</a>
+          <a href="#trust">Posicionamiento</a>
+          <a href="#offer">Capacidades</a>
+          <a href="#how">How it works</a>
+          <a href="#nvd">NVD/NIST</a>
           <a href="#showcase">Plataforma</a>
           <a href="#planes">Planes</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a class="btn btn-nav" href="#cta-final" data-ripple>Agendar demo</a>
+        <a class="btn btn-outline" href="#cta-final" data-ripple>Agendar demo</a>
       </div>
     </header>
 
-    <main>
-      <section class="hero section-dark">
+    <main id="top">
+      <section class="hero">
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow reveal hero-intro">Cyber Exposure Management Platform</span>
-            <h1 class="reveal hero-title">
-              Gestión de vulnerabilidades moderna para equipos que necesitan visibilidad real
+            <span class="eyebrow reveal">Elite Cyber Exposure Intelligence</span>
+            <h1 class="hero-title reveal">
+              Visibilidad real, priorización inteligente y ejecución enterprise en una sola plataforma.
             </h1>
-            <p class="hero-sub reveal hero-subline">
-              UltriScan centraliza activos, findings y CVEs en una plataforma diseñada para priorizar riesgo y operar a escala.
+            <p class="hero-sub reveal">
+              UltriScan eleva la operación de ciberseguridad con descubrimiento continuo, correlación técnica avanzada y narrativa ejecutiva de riesgo defendible.
             </p>
-            <div class="hero-actions reveal hero-actions-group">
+            <div class="hero-actions reveal">
               <a class="btn btn-primary" href="#cta-final" data-ripple>Agendar demo</a>
-              <a class="btn btn-secondary" href="#showcase">Ver plataforma</a>
+              <a class="btn btn-ghost" href="#showcase">Hablar con un especialista</a>
             </div>
-            <div class="hero-proof reveal">
-              <span>Operación multi-tenant</span>
-              <span>Priorización contextual</span>
-              <span>Reporting ejecutivo</span>
+            <div class="hero-tags reveal">
+              <span>Vulnerability & Exposure Management</span>
+              <span>Multi-tenant for MSSPs</span>
+              <span>NVD / NIST Intelligence</span>
             </div>
           </div>
 
-          <div class="hero-visual reveal" aria-label="Panel de exposición de UltriScan">
-            <div class="glass-shell">
+          <div class="hero-stage reveal" data-depth="8" aria-label="Vista conceptual de la plataforma UltriScan">
+            <article class="stage-panel panel-main">
               <header>
-                <h2>Exposure Command Center</h2>
-                <span class="live-dot">Sync Online</span>
+                <p>Exposure Command</p>
+                <span>Live Telemetry</span>
               </header>
-              <div class="kpi-grid">
-                <article>
-                  <p>Activos monitoreados</p>
-                  <strong>12,480</strong>
-                </article>
-                <article>
-                  <p>Critical Findings</p>
-                  <strong>42</strong>
-                </article>
-                <article>
-                  <p>CVE correlacionados</p>
-                  <strong>1,124</strong>
-                </article>
-                <article>
-                  <p>SLA compliance</p>
-                  <strong>96.2%</strong>
-                </article>
+              <div class="stage-kpis">
+                <div><small>Assets Mapped</small><strong>42,190</strong></div>
+                <div><small>Critical Findings</small><strong>117</strong></div>
+                <div><small>CVE Matches</small><strong>3,842</strong></div>
+                <div><small>Executive SLA</small><strong>98.1%</strong></div>
               </div>
-              <div class="hero-bars" aria-hidden="true">
-                <span style="--h: 34%"></span>
-                <span style="--h: 48%"></span>
-                <span style="--h: 63%"></span>
-                <span style="--h: 52%"></span>
-                <span style="--h: 72%"></span>
-                <span style="--h: 87%"></span>
+              <div class="signal-grid" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
               </div>
+            </article>
+            <article class="stage-panel panel-side" data-depth="16">
+              <p>Risk Heat Matrix</p>
+              <div class="matrix-lines"></div>
+            </article>
+            <article class="stage-panel panel-float" data-depth="22">
+              <p>CVE Intelligence Stream</p>
+              <ul>
+                <li>CVE-2026-2235 · Critical</li>
+                <li>CVE-2026-2191 · High</li>
+                <li>CVE-2026-2018 · High</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="trust" class="section trust">
+        <div class="container">
+          <p class="section-label reveal">Trust & positioning</p>
+          <div class="trust-shell reveal">
+            <h2>Arquitectura de operación diseñada para líderes de seguridad con exigencia enterprise.</h2>
+            <div class="trust-pills stagger-group">
+              <span class="reveal">Security Teams Corporativos</span>
+              <span class="reveal">Empresas medianas y grandes</span>
+              <span class="reveal">MSSPs y SOCs multi-cliente</span>
+              <span class="reveal">Consultoras de ciberseguridad</span>
+              <span class="reveal">Operación regional y global</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="valor" class="section section-dark">
+      <section id="offer" class="section">
         <div class="container">
-          <p class="section-label reveal">Valor de plataforma</p>
-          <h2 class="section-title reveal">Capacidades diseñadas para operación continua y decisiones de riesgo confiables</h2>
-          <div class="value-grid stagger-group">
-            <article class="value-card reveal"><span class="icon">🛰️</span><h3>Asset Discovery</h3><p>Mapa dinámico de activos cloud, on-prem y entornos híbridos para eliminar zonas ciegas.</p></article>
-            <article class="value-card reveal"><span class="icon">🔄</span><h3>Continuous Scanning</h3><p>Escaneo continuo con ventanas programables, trazabilidad y cobertura consistente.</p></article>
-            <article class="value-card reveal"><span class="icon">🎯</span><h3>Findings Prioritization</h3><p>Priorización por criticidad del activo, explotabilidad y contexto operativo real.</p></article>
-            <article class="value-card reveal"><span class="icon">🧩</span><h3>NVD/CVE Correlation</h3><p>Correlación inteligente de hallazgos con CVEs para reducir tiempo de diagnóstico.</p></article>
-            <article class="value-card reveal"><span class="icon">📚</span><h3>Knowledge Base integrada</h3><p>Playbooks, estándares y remediaciones en un repositorio operativo único.</p></article>
-            <article class="value-card reveal"><span class="icon">🏢</span><h3>Multi-tenant operations</h3><p>Gobierno por cliente, unidad o región desde una consola enterprise unificada.</p></article>
+          <p class="section-label reveal">What we offer</p>
+          <h2 class="section-title reveal">Capacidades estratégicas para una gestión integral de exposición y vulnerabilidades.</h2>
+          <div class="offer-grid stagger-group">
+            <article class="offer-card reveal"><span>◈</span><h3>Asset Discovery</h3><p>Mapeo continuo de superficie digital para eliminar puntos ciegos críticos.</p></article>
+            <article class="offer-card reveal"><span>◎</span><h3>Continuous Scanning</h3><p>Escaneo persistente con visibilidad de cambio y cobertura técnica sostenida.</p></article>
+            <article class="offer-card reveal"><span>◆</span><h3>Findings Prioritization</h3><p>Priorización por impacto, explotación probable y contexto de negocio.</p></article>
+            <article class="offer-card reveal"><span>✦</span><h3>NVD / CVE Correlation</h3><p>Correlación enriquecida para acelerar diagnóstico y toma de decisiones.</p></article>
+            <article class="offer-card reveal"><span>▣</span><h3>Knowledge Base</h3><p>Repositorio integrado de tácticas, remediaciones y lineamientos técnicos.</p></article>
+            <article class="offer-card reveal"><span>◉</span><h3>Reporting</h3><p>Reportes ejecutivos y técnicos listos para comités y clientes enterprise.</p></article>
+            <article class="offer-card reveal"><span>⬢</span><h3>Multi-Tenant Operations</h3><p>Gobierno granular por cliente, unidad y región en una sola consola.</p></article>
           </div>
         </div>
       </section>
 
-      <section id="nvd" class="section section-highlight">
-        <div class="container nvd-highlight reveal">
+      <section id="how" class="section how">
+        <div class="container">
+          <p class="section-label reveal">How it works</p>
+          <h2 class="section-title reveal">Un flujo estratégico que convierte señales técnicas en decisiones ejecutables.</h2>
+          <div class="how-layout reveal">
+            <ol class="how-steps stagger-group">
+              <li class="reveal"><b>01</b><div><h3>Assessment</h3><p>Levantamiento de activos, exposición y contexto operativo.</p></div></li>
+              <li class="reveal"><b>02</b><div><h3>Threat Analysis</h3><p>Análisis de vectores y condiciones de riesgo por entorno.</p></div></li>
+              <li class="reveal"><b>03</b><div><h3>Correlation</h3><p>Vinculación inteligente entre findings, activos y CVEs.</p></div></li>
+              <li class="reveal"><b>04</b><div><h3>Prioritization</h3><p>Ranking accionable basado en criticidad real y urgencia.</p></div></li>
+              <li class="reveal"><b>05</b><div><h3>Reporting / Optimization</h3><p>Seguimiento ejecutivo y mejora continua de postura de seguridad.</p></div></li>
+            </ol>
+            <div class="how-core" aria-hidden="true">
+              <div class="core-ring"></div>
+              <div class="core-ring ring-2"></div>
+              <div class="core-board">ULTRISCAN<br /><small>Cyber Intelligence Board</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="nvd" class="section nvd">
+        <div class="container nvd-shell reveal">
           <div>
-            <p class="section-label">Integración oficial NVD / NIST</p>
-            <h2 class="section-title">Inteligencia de vulnerabilidades conectada a datos oficiales y accionables</h2>
-            <p>
-              UltriScan sincroniza CVEs desde la National Vulnerability Database (NVD) del NIST para enriquecer cada finding con contexto actualizado,
-              correlación inteligente y señales reales de riesgo.
+            <p class="section-label">NVD / NIST Integration</p>
+            <h2 class="section-title">Inteligencia de vulnerabilidades respaldada por fuentes oficiales y contexto técnico real.</h2>
+            <p class="nvd-copy">
+              UltriScan sincroniza CVEs desde la National Vulnerability Database (NVD) del NIST para enriquecer hallazgos con señales verificables, referencias técnicas y criterios de priorización más precisos.
             </p>
             <ul>
-              <li>Sincronización continua de CVEs y metadatos relevantes.</li>
-              <li>Contexto enriquecido para acelerar triage y priorización.</li>
-              <li>Correlación inteligente entre hallazgos, activos y exposición.</li>
-              <li>Priorización basada en evidencia real y no en ruido.</li>
+              <li>Sincronización automática de CVEs y metadata asociada.</li>
+              <li>Correlación enriquecida entre findings y exposición activa.</li>
+              <li>Contexto técnico consolidado para equipos de remediación.</li>
+              <li>Priorización defendible para decisiones de riesgo enterprise.</li>
             </ul>
           </div>
-          <aside class="nvd-side">
-            <div class="nvd-chip">NVD Feed · NIST Referenced</div>
-            <p>Más precisión para equipos técnicos y mejor narrativa para comités ejecutivos.</p>
+          <aside>
+            <h3>Operational impact</h3>
             <dl>
-              <dt>Frecuencia de sync</dt><dd>Automatizada en ciclos cortos</dd>
-              <dt>Señales de contexto</dt><dd>CVSS, vectores, referencias y afectación</dd>
-              <dt>Resultado operativo</dt><dd>Decisiones más rápidas y defendibles</dd>
+              <dt>Signal Fidelity</dt><dd>Mayor precisión en el triage de vulnerabilidades críticas.</dd>
+              <dt>Technical Depth</dt><dd>Información contextual para análisis y remediación eficiente.</dd>
+              <dt>Executive Confidence</dt><dd>Reportes sustentados en datos de referencia reconocidos.</dd>
             </dl>
           </aside>
         </div>
       </section>
 
-      <section id="showcase" class="section section-dark">
+      <section id="showcase" class="section">
         <div class="container">
           <p class="section-label reveal">Product showcase</p>
-          <h2 class="section-title reveal">Interfaz estilo dashboard para operar riesgo con claridad ejecutiva</h2>
-          <div class="product-shell reveal">
-            <div class="metrics-row">
-              <article><span>Mean time to prioritize</span><strong>11 min</strong></article>
-              <article><span>Riesgo crítico abierto</span><strong>8.4%</strong></article>
-              <article><span>Assets en compliance</span><strong>91.7%</strong></article>
-              <article><span>CVE nuevos (24h)</span><strong>29</strong></article>
+          <h2 class="section-title reveal">Una experiencia de plataforma diseñada para decisiones rápidas, técnicas y ejecutivas.</h2>
+          <div class="showcase reveal">
+            <div class="stats-row">
+              <article><small>Risk Posture Index</small><strong>78.4</strong><em>+6.2% mensual</em></article>
+              <article><small>Critical Exposure</small><strong>5.1%</strong><em>-18% trimestral</em></article>
+              <article><small>CVE Correlated</small><strong>1,247</strong><em>actualizado 15 min</em></article>
+              <article><small>MTTR Trend</small><strong>↓ 31%</strong><em>últimos 90 días</em></article>
             </div>
-            <div class="product-grid">
-              <div class="severity-card">
-                <h3>Distribución por severidad</h3>
-                <div class="severity-bars" aria-hidden="true">
-                  <div><span>Critical</span><b style="--w: 86%"></b></div>
-                  <div><span>High</span><b style="--w: 72%"></b></div>
-                  <div><span>Medium</span><b style="--w: 54%"></b></div>
-                  <div><span>Low</span><b style="--w: 31%"></b></div>
+            <div class="showcase-grid">
+              <article>
+                <h3>Risk Overview</h3>
+                <div class="risk-lines">
+                  <span style="--w:92%">Critical</span>
+                  <span style="--w:74%">High</span>
+                  <span style="--w:53%">Medium</span>
+                  <span style="--w:34%">Low</span>
                 </div>
-              </div>
-              <div class="findings-card">
-                <h3>Findings priorizados</h3>
+              </article>
+              <article>
+                <h3>Top Findings</h3>
                 <ul>
-                  <li><span>CVE-2026-1784</span><em>Critical · API Gateway</em></li>
-                  <li><span>OpenSSL chain weakness</span><em>High · Core Cluster</em></li>
-                  <li><span>CVE-2026-0109</span><em>High · Identity Node</em></li>
-                  <li><span>Outdated dependency set</span><em>Medium · Client Portal</em></li>
+                  <li><b>CVE-2026-2235</b><em>Critical · External API Cluster</em></li>
+                  <li><b>CVE-2026-2031</b><em>High · Identity Bridge</em></li>
+                  <li><b>Misconfigured Secrets</b><em>High · DevOps Pipeline</em></li>
+                  <li><b>Legacy TLS Profile</b><em>Medium · Edge Network</em></li>
                 </ul>
-              </div>
-              <div class="cve-card">
-                <h3>CVEs recientes</h3>
-                <p>UltriScan detecta, contextualiza y sugiere ruta de remediación según criticidad de negocio.</p>
-                <div class="cve-list">
-                  <span>CVE-2026-1784</span>
-                  <span>CVE-2026-1660</span>
-                  <span>CVE-2026-1312</span>
-                  <span>CVE-2026-1066</span>
-                </div>
-              </div>
+              </article>
+              <article class="wide">
+                <h3>Security Operations Feed</h3>
+                <p>Dashboard unificado para exposición, findings, CVEs y estado de cumplimiento en entornos multi-tenant.</p>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="planes" class="section section-dark pricing-section">
+      <section id="planes" class="section pricing">
         <div class="container">
-          <p class="section-label reveal">Planes</p>
-          <h2 class="section-title reveal">Modelos diseñados para crecer de equipo interno a operación enterprise</h2>
+          <p class="section-label reveal">Plans / pricing</p>
+          <h2 class="section-title reveal">Planes orientados a escalar desde operaciones focalizadas hasta ecosistemas enterprise complejos.</h2>
           <div class="pricing-grid stagger-group">
-            <article class="plan-card reveal">
+            <article class="plan reveal">
               <h3>Starter</h3>
-              <p class="price">desde $49<span>/mes</span></p>
+              <p class="price">Desde USD 49 <span>/ mes</span></p>
               <ul>
-                <li>Hasta 500 activos</li>
+                <li>Monitoreo inicial de superficie</li>
                 <li>Escaneo continuo base</li>
                 <li>Correlación CVE esencial</li>
                 <li>Reportes operativos</li>
               </ul>
-              <a class="btn btn-secondary" href="#cta-final">Agendar demo</a>
+              <a class="btn btn-ghost" href="#cta-final">Solicitar demo</a>
             </article>
-            <article class="plan-card featured reveal">
-              <p class="badge">Recomendado</p>
+            <article class="plan featured reveal">
+              <p class="badge">Plan recomendado</p>
               <h3>Professional</h3>
-              <p class="price">desde $149<span>/mes</span></p>
+              <p class="price">Desde USD 149 <span>/ mes</span></p>
               <ul>
-                <li>Hasta 5,000 activos</li>
-                <li>Priorización avanzada por riesgo</li>
-                <li>NVD/NIST enrichment extendido</li>
+                <li>Priorización avanzada por contexto</li>
+                <li>Integración NVD / NIST extendida</li>
                 <li>Knowledge Base colaborativa</li>
                 <li>Reporting ejecutivo + técnico</li>
               </ul>
               <a class="btn btn-primary" href="#cta-final" data-ripple>Agendar demo</a>
             </article>
-            <article class="plan-card reveal">
+            <article class="plan reveal">
               <h3>Enterprise</h3>
-              <p class="price">custom<span>pricing</span></p>
+              <p class="price">Custom <span>pricing</span></p>
               <ul>
-                <li>Multi-tenant full scale</li>
-                <li>SSO, RBAC y compliance avanzado</li>
-                <li>SLA dedicado y onboarding estratégico</li>
-                <li>Integraciones y workflows personalizados</li>
+                <li>Operación multi-tenant avanzada</li>
+                <li>Gobierno, RBAC y compliance</li>
+                <li>Onboarding y soporte dedicado</li>
+                <li>Integraciones estratégicas a medida</li>
               </ul>
-              <a class="btn btn-secondary" href="#cta-final">Contactar</a>
+              <a class="btn btn-ghost" href="#cta-final">Hablar con ventas</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="cta-final" class="section final-cta">
-        <div class="container final-cta-wrap reveal">
-          <h2>Empieza a ver tu exposición con claridad</h2>
-          <p>Agenda una demo y descubre cómo UltriScan puede ayudarte a priorizar riesgo real.</p>
-          <a class="btn btn-primary btn-large" href="#" data-ripple>Agendar demo</a>
+      <section id="cta-final" class="section cta-final">
+        <div class="container cta-shell reveal">
+          <h2>Lidere su postura de ciberseguridad con una plataforma diseñada para decisión enterprise.</h2>
+          <p>Agende una demostración ejecutiva y descubra cómo UltriScan transforma exposición técnica en inteligencia accionable.</p>
+          <a class="btn btn-primary btn-lg" href="#" data-ripple>Agendar demo</a>
         </div>
       </section>
 
-      <section id="faq" class="section section-dark faq-section">
+      <section id="faq" class="section faq">
         <div class="container">
           <p class="section-label reveal">FAQ</p>
           <h2 class="section-title reveal">Preguntas frecuentes</h2>
           <div class="faq-list">
-            <article class="faq-item reveal">
-              <button class="faq-trigger" type="button" aria-expanded="false">¿Qué escanea UltriScan?</button>
-              <div class="faq-content"><p>Escanea activos internos y expuestos, servicios críticos, superficies cloud y componentes de infraestructura híbrida para ofrecer una visión de riesgo consolidada.</p></div>
-            </article>
-            <article class="faq-item reveal">
-              <button class="faq-trigger" type="button" aria-expanded="false">¿Integra CVEs?</button>
-              <div class="faq-content"><p>Sí. Correlaciona findings con CVEs y añade metadatos que facilitan priorización, triage y comunicación técnica con equipos de remediación.</p></div>
-            </article>
-            <article class="faq-item reveal">
-              <button class="faq-trigger" type="button" aria-expanded="false">¿Soporta múltiples clientes?</button>
-              <div class="faq-content"><p>Totalmente. Su arquitectura multi-tenant permite aislar información, definir roles y operar múltiples organizaciones en paralelo.</p></div>
-            </article>
-            <article class="faq-item reveal">
-              <button class="faq-trigger" type="button" aria-expanded="false">¿Genera reportes?</button>
-              <div class="faq-content"><p>Genera reportes ejecutivos y técnicos listos para comité de riesgo, stakeholders internos, auditores y clientes finales.</p></div>
-            </article>
-            <article class="faq-item reveal">
-              <button class="faq-trigger" type="button" aria-expanded="false">¿Se integra con NVD/NIST?</button>
-              <div class="faq-content"><p>Sí. Aprovecha la National Vulnerability Database (NVD) del NIST para enriquecer contexto y sostener decisiones de priorización basadas en datos oficiales.</p></div>
-            </article>
+            <article class="faq-item reveal"><button class="faq-trigger" type="button" aria-expanded="false">¿Qué tipo de escaneos realiza UltriScan?</button><div class="faq-content"><p>UltriScan combina descubrimiento de activos y escaneo continuo para mantener una visión actualizada de exposición en entornos híbridos.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-trigger" type="button" aria-expanded="false">¿Cómo funciona la correlación con CVEs?</button><div class="faq-content"><p>El motor correlaciona hallazgos técnicos con CVEs relevantes, agregando contexto operativo para priorizar acciones reales.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-trigger" type="button" aria-expanded="false">¿Qué aporta la integración con NVD/NIST?</button><div class="faq-content"><p>Aporta datos oficiales y actualizados que robustecen análisis técnico, trazabilidad y decisiones de riesgo basadas en evidencia.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-trigger" type="button" aria-expanded="false">¿Soporta múltiples clientes y unidades?</button><div class="faq-content"><p>Sí. La arquitectura multi-tenant permite operar múltiples organizaciones con segmentación, roles y gobierno centralizado.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-trigger" type="button" aria-expanded="false">¿Qué tipo de reportes incluye?</button><div class="faq-content"><p>Incluye reporting técnico y ejecutivo para equipos de seguridad, dirección y stakeholders externos con métricas accionables.</p></div></article>
+            <article class="faq-item reveal"><button class="faq-trigger" type="button" aria-expanded="false">¿Cómo es el despliegue de la plataforma?</button><div class="faq-content"><p>El despliegue se adapta a la madurez del cliente con onboarding guiado, parametrización y acompañamiento de especialistas.</p></div></article>
           </div>
         </div>
       </section>
@@ -269,29 +283,26 @@
     <footer class="footer">
       <div class="container footer-grid">
         <div>
-          <a class="brand" href="#">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <span>UltriScan</span>
-          </a>
-          <p>Vulnerability management para equipos que operan seguridad con estándar enterprise.</p>
+          <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>UltriScan</span></a>
+          <p>Cyber exposure management platform para organizaciones que exigen precisión técnica y narrativa ejecutiva de alto nivel.</p>
         </div>
         <div>
-          <h3>Producto</h3>
-          <a href="#valor">Producto</a>
-          <a href="#showcase">Plataforma</a>
+          <h3>Plataforma</h3>
+          <a href="#offer">Capacidades</a>
+          <a href="#how">How it works</a>
+          <a href="#showcase">Showcase</a>
+        </div>
+        <div>
+          <h3>Inteligencia</h3>
           <a href="#nvd">NVD / NIST</a>
-        </div>
-        <div>
-          <h3>Planes</h3>
-          <a href="#planes">Starter</a>
-          <a href="#planes">Professional</a>
-          <a href="#planes">Enterprise</a>
+          <a href="#planes">Planes</a>
+          <a href="#faq">FAQ</a>
         </div>
         <div>
           <h3>Comercial</h3>
-          <a href="#cta-final">Demo</a>
-          <a href="mailto:contacto@ultriscan.com">Contacto</a>
-          <a href="#">Legal</a>
+          <a href="#cta-final">Agendar demo</a>
+          <a href="mailto:contacto@ultriscan.com">contacto@ultriscan.com</a>
+          <a href="#">Privacidad y legal</a>
         </div>
       </div>
     </footer>
