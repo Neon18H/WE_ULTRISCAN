@@ -9,15 +9,29 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.16, rootMargin: '0px 0px -40px 0px' },
+  { threshold: 0.15, rootMargin: '0px 0px -36px 0px' },
 );
 
 revealItems.forEach((item, index) => {
   const group = item.closest('.stagger-group');
-  if (group) {
-    item.style.transitionDelay = `${(index % 7) * 70}ms`;
-  }
+  if (group) item.style.transitionDelay = `${(index % 8) * 70}ms`;
   revealObserver.observe(item);
+});
+
+const topbar = document.querySelector('.topbar');
+window.addEventListener('scroll', () => {
+  topbar.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+const parallaxNodes = document.querySelectorAll('[data-depth]');
+window.addEventListener('pointermove', (event) => {
+  const x = (event.clientX / window.innerWidth - 0.5) * 2;
+  const y = (event.clientY / window.innerHeight - 0.5) * 2;
+
+  parallaxNodes.forEach((node) => {
+    const depth = Number(node.dataset.depth || 0);
+    node.style.transform = `translate3d(${x * depth * -0.22}px, ${y * depth * -0.18}px, 0)`;
+  });
 });
 
 const faqButtons = document.querySelectorAll('.faq-trigger');
@@ -29,46 +43,13 @@ faqButtons.forEach((button) => {
 
     faqButtons.forEach((btn) => {
       btn.setAttribute('aria-expanded', 'false');
-      const parent = btn.closest('.faq-item');
-      const panel = parent.querySelector('.faq-content');
+      const panel = btn.closest('.faq-item').querySelector('.faq-content');
       panel.style.maxHeight = null;
-      parent.classList.remove('active');
     });
 
     if (!expanded) {
       button.setAttribute('aria-expanded', 'true');
-      item.classList.add('active');
       content.style.maxHeight = `${content.scrollHeight}px`;
     }
-  });
-});
-
-const rippleButtons = document.querySelectorAll('[data-ripple]');
-rippleButtons.forEach((button) => {
-  button.addEventListener('pointerdown', (event) => {
-    const rect = button.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const ripple = document.createElement('span');
-
-    ripple.className = 'ripple';
-    ripple.style.width = ripple.style.height = `${size}px`;
-    ripple.style.left = `${event.clientX - rect.left - size / 2}px`;
-    ripple.style.top = `${event.clientY - rect.top - size / 2}px`;
-
-    button.appendChild(ripple);
-    ripple.addEventListener('animationend', () => ripple.remove());
-  });
-});
-
-const parallaxNodes = document.querySelectorAll('[data-depth]');
-window.addEventListener('pointermove', (event) => {
-  const xRatio = (event.clientX / window.innerWidth - 0.5) * 2;
-  const yRatio = (event.clientY / window.innerHeight - 0.5) * 2;
-
-  parallaxNodes.forEach((node) => {
-    const depth = Number(node.dataset.depth || 0);
-    const moveX = xRatio * depth * -0.25;
-    const moveY = yRatio * depth * -0.2;
-    node.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
   });
 });
