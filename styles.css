@@ -544,6 +544,20 @@ section { position: relative; z-index: 2; }
 }
 .cta-section h2 em { color: var(--green); font-style: normal; }
 .cta-section p { max-width: 46ch; margin: 0 auto 3rem; color: var(--muted); font-weight: 300; line-height: 1.75; }
+.cta-contact {
+  margin: -1.2rem auto 2rem !important;
+  font-size: 0.9rem;
+}
+.cta-contact a {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 255, 122, 0.28);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.cta-contact a:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
 .cta-link { display: inline-flex; margin: 0 auto; }
 
 .faq-section {
@@ -602,6 +616,52 @@ footer a:hover { color: var(--white); }
   letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;
 }
 
+.wa-float {
+  position: fixed;
+  right: 1.4rem;
+  bottom: 1.5rem;
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(26, 255, 122, 0.36);
+  background: rgba(5, 17, 10, 0.88);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(26, 255, 122, 0.08);
+  color: var(--white);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  backdrop-filter: blur(10px);
+}
+
+.wa-float:hover {
+  transform: translateY(-2px);
+  border-color: var(--green);
+  background: rgba(8, 28, 15, 0.95);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42), 0 0 24px rgba(26, 255, 122, 0.25);
+}
+
+.wa-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 255, 122, 0.14);
+  color: var(--green);
+  font-size: 0.9rem;
+}
+
+.wa-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(240, 245, 241, 0.86);
+}
+
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .reveal.vis { opacity: 1; transform: translateY(0); }
 
@@ -631,6 +691,8 @@ footer a:hover { color: var(--white); }
   .cap-tag { display: none; }
   .steps { grid-template-columns: 1fr; }
   .dash-top { grid-template-columns: 1fr 1fr; }
+  .wa-float { right: 1rem; bottom: 1rem; padding: 0.66rem 0.88rem; }
+  .wa-text { display: none; }
   footer { grid-template-columns: 1fr; }
   .footer-copy { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
