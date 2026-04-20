@@ -747,77 +747,6 @@ footer a:hover { color: var(--white); }
   letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;
 }
 
-.wa-float {
-  position: fixed;
-  right: 1.4rem;
-  bottom: 1.5rem;
-  z-index: 120;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(26, 255, 122, 0.36);
-  background: rgba(5, 17, 10, 0.88);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(26, 255, 122, 0.08);
-  color: var(--white);
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-  backdrop-filter: blur(10px);
-}
-
-.wa-float:hover {
-  transform: translateY(-2px);
-  border-color: var(--green);
-  background: rgba(8, 28, 15, 0.95);
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42), 0 0 24px rgba(26, 255, 122, 0.25);
-}
-
-.wa-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(26, 255, 122, 0.14);
-  color: var(--green);
-  font-size: 0.9rem;
-}
-
-.wa-text {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(240, 245, 241, 0.86);
-}
-
-.wa-float::after {
-  content: 'Envía un mensaje a Ultriatech por WhatsApp';
-  position: absolute;
-  right: calc(100% + 0.55rem);
-  top: 50%;
-  transform: translateY(-50%) translateX(6px);
-  white-space: nowrap;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: rgba(240, 245, 241, 0.82);
-  border: 1px solid rgba(26,255,122,0.28);
-  border-radius: 999px;
-  padding: 0.4rem 0.65rem;
-  background: rgba(3, 12, 7, 0.92);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-.wa-float:hover::after {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-}
-
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .reveal.vis { opacity: 1; transform: translateY(0); }
 
@@ -848,9 +777,93 @@ footer a:hover { color: var(--white); }
   .cap-tag { display: none; }
   .steps { grid-template-columns: 1fr; }
   .dash-top { grid-template-columns: 1fr 1fr; }
-  .wa-float { right: 1rem; bottom: 1rem; padding: 0.66rem 0.88rem; }
-  .wa-text { display: none; }
-  .wa-float::after { display: none; }
   footer { grid-template-columns: 1fr; }
   .footer-copy { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+/* ── Panel corners ── */
+.panel-corner { position:absolute; width:18px; height:18px; opacity:0.5; }
+.panel-corner.tl { top:10px; left:10px; border-top:1px solid var(--green); border-left:1px solid var(--green); }
+.panel-corner.tr { top:10px; right:10px; border-top:1px solid var(--green); border-right:1px solid var(--green); }
+.panel-corner.bl { bottom:10px; left:10px; border-bottom:1px solid var(--green); border-left:1px solid var(--green); }
+.panel-corner.br { bottom:10px; right:10px; border-bottom:1px solid var(--green); border-right:1px solid var(--green); }
+
+/* Panel header */
+.panel-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.2rem; position:relative; z-index:1; }
+.panel-title-group { display:flex; align-items:center; gap:0.7rem; }
+.panel-dot { width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 8px var(--green); animation:blink 2.4s ease-in-out infinite; }
+.panel-title-text { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); }
+.panel-status-badge { font-family:'DM Mono',monospace; font-size:0.58rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(240,245,241,0.28); display:flex; align-items:center; gap:0.5rem; }
+.status-line { width:24px; height:1px; background:rgba(26,255,122,0.18); }
+
+/* Scanner animation on logo nodes */
+.logo-node { position:relative; overflow:hidden; }
+.logo-node::after {
+  content:''; position:absolute; left:0; top:-100%; width:100%; height:100%;
+  background:linear-gradient(180deg,transparent 0%,rgba(26,255,122,0.05) 45%,rgba(26,255,122,0.12) 50%,rgba(26,255,122,0.05) 55%,transparent 100%);
+  animation:scan 3.5s ease-in-out infinite; pointer-events:none;
+}
+.logo-node:nth-child(2)::after { animation-delay:1.75s; }
+@keyframes scan { 0%{top:-100%;opacity:0} 10%{opacity:1} 90%{opacity:1} 100%{top:100%;opacity:0} }
+
+/* Crosshair on logo slots */
+.logo-slot::before {
+  content:''; position:absolute; inset:0;
+  background:
+    linear-gradient(90deg,transparent calc(50% - 0.5px),rgba(26,255,122,0.07) calc(50% - 0.5px),rgba(26,255,122,0.07) calc(50% + 0.5px),transparent calc(50% + 0.5px)),
+    linear-gradient(180deg,transparent calc(50% - 0.5px),rgba(26,255,122,0.07) calc(50% - 0.5px),rgba(26,255,122,0.07) calc(50% + 0.5px),transparent calc(50% + 0.5px));
+  opacity:0; transition:opacity 0.3s; pointer-events:none;
+}
+.logo-slot:hover::before { opacity:1; }
+
+/* Feed badges */
+.feed-badge {
+  position:absolute; top:0.55rem; right:0.55rem; z-index:2;
+  font-family:'DM Mono',monospace; font-size:0.52rem; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--green); background:rgba(26,255,122,0.1); border:1px solid rgba(26,255,122,0.22);
+  border-radius:4px; padding:0.12rem 0.38rem;
+}
+.feed-badge::before { content:'● '; font-size:0.42rem; }
+
+/* Panel ticker */
+.panel-ticker { border-top:1px solid rgba(26,255,122,0.08); margin-top:1rem; padding-top:0.65rem; overflow:hidden; position:relative; z-index:1; }
+.ticker-inner { display:flex; gap:2rem; animation:pticker 18s linear infinite; white-space:nowrap; }
+.ticker-inner span { font-family:'DM Mono',monospace; font-size:0.58rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); flex-shrink:0; }
+.ticker-inner .t-hi { color:var(--green); }
+@keyframes pticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ── WhatsApp button upgrade ── */
+.wa-float {
+  position:fixed; right:1.4rem; bottom:1.5rem; z-index:5000;
+  display:inline-flex; align-items:center; gap:0.6rem;
+  padding:0.72rem 1.1rem; border-radius:999px;
+  border:1px solid rgba(26,255,122,0.38);
+  background:rgba(5,17,10,0.92);
+  box-shadow:0 14px 32px rgba(0,0,0,0.38),0 0 0 1px rgba(26,255,122,0.06);
+  color:var(--white); text-decoration:none;
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  transition:transform 0.25s,border-color 0.25s,box-shadow 0.25s;
+}
+.wa-float::before {
+  content:''; position:absolute; inset:-7px; border-radius:999px;
+  border:1.5px solid rgba(26,255,122,0.2);
+  animation:wa-pulse 2.8s ease-out infinite;
+}
+.wa-float::after {
+  content:''; position:absolute; inset:-14px; border-radius:999px;
+  border:1px solid rgba(26,255,122,0.08);
+  animation:wa-pulse 2.8s ease-out infinite 0.7s;
+}
+@keyframes wa-pulse { 0%{transform:scale(1);opacity:0.7} 100%{transform:scale(1.22);opacity:0} }
+.wa-float:hover { transform:translateY(-2px); border-color:var(--green); box-shadow:0 16px 34px rgba(0,0,0,0.45),0 0 28px rgba(26,255,122,0.28); }
+
+.wa-icon-circle { width:30px; height:30px; border-radius:50%; background:rgba(26,255,122,0.14); display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
+.wa-text-group { display:flex; flex-direction:column; gap:1px; }
+.wa-label-text { font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:rgba(240,245,241,0.9); }
+.wa-sub-text { font-family:'DM Mono',monospace; font-size:0.54rem; letter-spacing:0.1em; color:var(--green); opacity:0.75; }
+
+@media (max-width: 720px) {
+  .wa-float { right:1rem; bottom:1rem; padding:0.7rem; }
+  .wa-text-group { display:none; }
+  .wa-float::after { display:none; }
 }
