@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -131,16 +132,57 @@
 
       <section id="nvd" class="nvd-section">
         <div class="nvd-left reveal">
-          <div class="label">NVD / NIST Intelligence</div>
-          <h2>Contexto oficial de vulnerabilidades integrado.</h2>
-          <p>UltriScan sincroniza y normaliza CVEs desde la National Vulnerability Database (NVD) del NIST para enriquecer hallazgos con metadata oficial, mejorar la correlación técnica y sostener priorización basada en fuentes confiables.</p>
+          <div class="label">Vulnerability Intelligence Integrations</div>
+          <h2>Threat intelligence accionable para priorizar el riesgo real.</h2>
+          <p>UltriScan integra inteligencia de vulnerabilidades desde fuentes reconocidas para convertir findings en decisiones de remediación con contexto técnico sólido, trazabilidad y mejor visibilidad de exposición explotable.</p>
+          <div class="nvd-pill-row">
+            <span class="nvd-pill">CVE Synchronization</span>
+            <span class="nvd-pill">Threat Context</span>
+            <span class="nvd-pill">Exposure Intelligence</span>
+          </div>
           <a class="btn-green" href="#cta-final">Agendar demo <span class="arrow">↗</span></a>
         </div>
-        <div class="nvd-cards reveal">
-          <div class="nvd-card"><div class="nvd-icon">⟳</div><div><h3>Sincronización continua</h3><p>Actualización de CVEs y referencias técnicas con trazabilidad completa hacia la fuente oficial.</p></div></div>
-          <div class="nvd-card"><div class="nvd-icon">⊕</div><div><h3>Correlación enriquecida</h3><p>Match contextual entre findings, activos y evidencia de exposición con metadata de NIST.</p></div></div>
-          <div class="nvd-card"><div class="nvd-icon">◎</div><div><h3>Priorización de precisión</h3><p>Más señal útil para separar ruido operativo de riesgo material, con scoring soportado por datos reales.</p></div></div>
-          <div class="nvd-card"><div class="nvd-icon">⚑</div><div><h3>ExploitDB Intelligence</h3><p>Correlación CVE-exploit público conocido para identificar exposición explotable sin promover explotación automática.</p></div></div>
+
+        <div class="integration-panel reveal" aria-label="Integraciones NVD/NIST y ExploitDB">
+          <div class="integration-glow" aria-hidden="true"></div>
+          <div class="integration-logos">
+            <article class="logo-node">
+              <div class="logo-tag">NVD / NIST Feed</div>
+              <div class="logo-stack logo-stack-main">
+                <div class="logo-slot wide logo-slot-combined">
+                  <img src="{% static 'img/integrations/nvd-nist-logo.png' %}" alt="NVD / NIST" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+                  <span class="logo-fallback">NVD / NIST</span>
+                </div>
+                <div class="logo-slot">
+                  <img src="{% static 'img/integrations/nvd-logo.png' %}" alt="NVD" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+                  <span class="logo-fallback">NVD</span>
+                </div>
+                <div class="logo-slot">
+                  <img src="{% static 'img/integrations/nist-logo.png' %}" alt="NIST" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+                  <span class="logo-fallback">NIST</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="logo-node">
+              <div class="logo-tag">Exploit Correlation Feed</div>
+              <div class="logo-stack single">
+                <div class="logo-slot wide">
+                  <img src="{% static 'img/integrations/exploitdb-logo.png' %}" alt="ExploitDB" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+                  <span class="logo-fallback">ExploitDB</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="integration-divider" aria-hidden="true"></div>
+
+          <div class="nvd-cards">
+            <div class="nvd-card"><div class="nvd-icon">⟳</div><div><h3>NVD / NIST: sincronización continua de CVEs</h3><p>Ingesta y normalización continua desde fuentes oficiales para enriquecer hallazgos con contexto técnico confiable.</p></div></div>
+            <div class="nvd-card"><div class="nvd-icon">⊕</div><div><h3>Enriquecimiento técnico de vulnerabilidades</h3><p>Correlación de CVEs con evidencia operativa para mejorar la visibilidad del riesgo y la calidad de análisis.</p></div></div>
+            <div class="nvd-card"><div class="nvd-icon">◎</div><div><h3>ExploitDB: exposición explotable conocida</h3><p>Correlación de CVEs con exploits públicos conocidos para apoyar priorización técnica y respuesta más informada.</p></div></div>
+            <div class="nvd-card"><div class="nvd-icon">⚑</div><div><h3>Priorización orientada a riesgo real</h3><p>Inteligencia adicional para findings críticos sin prometer explotación automática: más foco, menos ruido operativo.</p></div></div>
+          </div>
         </div>
       </section>
 
@@ -209,7 +251,7 @@
         <p class="cta-label reveal">Executive demo</p>
         <h2 class="reveal">Convierta<br /><em>Exposición</em><br />en Control.</h2>
         <p class="reveal">Coordine una demo con nuestro equipo y vea cómo UltriScan acelera la priorización con CVE + intelligence de exploits públicos, eleva visibilidad de exposición real y fortalece la ejecución de seguridad enterprise.</p>
-        <p class="reveal cta-contact">También puede escribirnos a <a href="mailto:support@ultriatech.cloud">support@ultriatech.cloud</a> o por WhatsApp al <a href="https://wa.me/573206090618" target="_blank" rel="noopener noreferrer">+57 320 609 0618</a>.</p>
+        <p class="reveal cta-contact">También puede escribirnos a <a href="mailto:support@ultriatech.cloud">support@ultriatech.cloud</a> o por WhatsApp al <a href="https://wa.me/573206090618" target="_blank" rel="noopener noreferrer">573206090618</a>.</p>
         <a class="btn-green reveal cta-link" href="mailto:support@ultriatech.cloud">Agendar demo <span class="arrow">↗</span></a>
       </section>
 
@@ -245,7 +287,7 @@
         <a href="#planes">Planes</a>
         <a href="#cta-final">Demo</a>
         <a href="mailto:support@ultriatech.cloud">support@ultriatech.cloud</a>
-        <a href="https://wa.me/573206090618" target="_blank" rel="noopener noreferrer">WhatsApp: +57 320 609 0618</a>
+        <a href="https://wa.me/573206090618" target="_blank" rel="noopener noreferrer">WhatsApp: 573206090618</a>
       </div>
       <div>
         <h4>Legal</h4>
